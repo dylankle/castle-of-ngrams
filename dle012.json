@@ -1,0 +1,26 @@
+{"start": {
+  "description": "You are at the start of a mysterious forest path. You can go north or east.",
+  "exits": {"north": "cabin", "east": "river"},
+  "items": []
+},
+  "cabin": {
+    "description": "You have entered a small wooden cabin. There's a key on the table. You can go south or west.",
+    "exits": {"south": "start", "west": "mountain"},
+    "items": ["key"]
+  },
+  "river": {
+    "description": "You are standing by a flowing river. You see a boat and a bridge. You can go west or north.",
+    "exits": {"west": "start", "north": "mountain"},
+    "items": []
+  },
+  "mountain": {
+    "description": "You have climbed the mountain. The view is stunning. There's a cave entrance here. You can go east.",
+    "exits": {"east": "cave"},
+    "items": []
+  },
+  "cave": {
+    "description": "You are inside a dark cave. It's cold and damp. There's a treasure chest here. You can go west.",
+    "exits": {"west": "mountain"},
+    "items": ["treasure"]
+  }
+}
