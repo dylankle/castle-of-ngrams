@@ -3,7 +3,7 @@
 ## Description
 Text adventure game in Python using a language model to generate a small sentence for the user to guess what the next word in the final room to win!
 
-## Description
+## UML
 main.py : main python file {run this}
 room_data.json : json file with all the room information: description, possible key words, and connected vertices
 word_generator.py : python file that has the n-gram tokenizer program from the extra credit assignment. takes puzzle_text.txt, tokenizes it, and turns it into a dictionary, word_data.json. returns information back to main.py
