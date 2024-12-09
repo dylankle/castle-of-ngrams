@@ -1,0 +1,67 @@
+{"start": {
+  "description": "You are at the start of a mysterious forest path. You can go north or east.",
+  "exits": {"north": "cabin", "east": "river"},
+  "items": [],
+  "damage" : 0
+},
+  "cabin": {
+    "description": "You have entered a small wooden cabin. There's a key on the table. You can go south or east.",
+    "exits": {"south": "start", "east": "mountain"},
+    "items": ["key"],
+    "damage" : 0
+  },
+  "river": {
+    "description": "You are standing by a flowing river. You see a boat and a bridge. You can go west or north.",
+    "exits": {"west": "start", "north": "mountain", "east":  "castle"},
+    "items": [],
+    "damage" : 0
+  },
+  "mountain": {
+    "description": "You have climbed the mountain. The view is stunning. There's a cave entrance east or you can go south.",
+    "exits": {"east": "cave", "south":  "river"},
+    "items": [],
+    "damage" : 0
+  },
+  "cave": {
+    "description": "You are inside a dark cave and stepped in an acid puddle -1 life :( It's cold and damp. There's a treasure chest here. You can go west.",
+    "exits": {"west": "mountain"},
+    "items": ["treasure"],
+    "damage" : 1
+  },
+  "dining hall": {
+    "description" : "You have entered the dining hall. There's some floor chicken here. You can go north, south, or east.",
+    "exits": {"north": "throne room", "south":  "dungeon", "west":  "castle"},
+    "items": ["chicken"],
+    "damage": 0
+  },
+  "castle": {
+    "description": "You are at the entrance of the castle. You can go east or west.",
+    "exits": {"east":  "dining hall", "west":  "river"},
+    "items": [],
+    "damage": 0
+  },
+  "dungeon": {
+    "description": "You have entered the dungeon and the executioner greets you with his gleaming axe -1 life :( You can only go north.",
+    "exits": {"north":  "dining hall"},
+    "items": [],
+    "damage": 1
+  },
+  "throne room": {
+    "description": "You have entered the throne room. The King's skeleton lies on the throne... You can go north or south.",
+    "exits": {"south" :  "dining hall", "north": "escape"},
+    "items": [],
+    "damage": 0
+  },
+  "escape": {
+    "description": "",
+    "exits": {},
+    "items": [],
+    "damage": 0
+  },
+  "eerie start": {
+    "description": "Welcome back...The mysterious forest path- feels like nothings changed...",
+    "exits": {"north": "cabin", "east": "river"},
+    "items": [],
+    "damage" : 0
+  }
+}
