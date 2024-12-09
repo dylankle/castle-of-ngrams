@@ -1,6 +1,7 @@
 import json
+from word_generator import generate_challenge
 
-with open('dle012.json') as json_data:
+with open('room_data.json') as json_data:
     rooms = json.load(json_data)
 
 # Player inventory and current place
@@ -31,15 +32,13 @@ def look(dmg):
 # Challenge method when before the user can escape
 def challenge():
     global current_room
-    choice = input("\nEnter yes to escape.\nWhat will you do? ")
+    values = generate_challenge()
+    choice = input("\n" + values[0] + " ____\nGuess the next word (Caps matter!) ")
 
-    while choice != "yes" and choice != "no":
-        choice = input("Invalid input.  Enter yes to escape.")
-
-    if choice == "yes":
+    if choice == values[1]:
         print("Congrats! You escaped the loop.")
     else:
-        print("You failed and you find yourself back at the start...")
+        print("The word was " + values[1] + "You failed and you find yourself back at the start...")
         current_room = "eerie start"
         look(False)
 
@@ -57,7 +56,7 @@ def go(direction):
         elif rooms[current_room]["damage"] == 1:
             lives -= 1
             if lives == 0:
-                print("Game Over!")
+                print("Game Over! You died :(")
             else:
                 look(True)
         else:
