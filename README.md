@@ -1,2 +1,2 @@
-# Castle of N-Grams
+# Kingdom of N-Grams
 Text adventure game in Python.
